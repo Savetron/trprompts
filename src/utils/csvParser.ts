@@ -1,11 +1,9 @@
 
-import Papa from 'papaparse';
-
 export interface Prompt {
   title: string;
   description: string;
   prompt: string;
-  category?: string;
+  category?: string; // Zaten mevcut, varsayılan değeri 'Genel'
 }
 
 export const parseCSV = (file: File): Promise<Prompt[]> => {
@@ -17,7 +15,7 @@ export const parseCSV = (file: File): Promise<Prompt[]> => {
           title: row.title || '',
           description: row.description || '',
           prompt: row.prompt || '',
-          category: row.category || 'Genel'
+          category: row.category || 'Genel' // Kategori için varsayılan değer 'Genel'
         })).filter((prompt: Prompt) => prompt.title && prompt.prompt);
         resolve(prompts);
       },

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -63,6 +62,7 @@ const Index = () => {
               title={prompt.title}
               description={prompt.description}
               prompt={prompt.prompt}
+              category={prompt.category}
             />
           ))}
         </div>
