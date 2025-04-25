@@ -4,6 +4,7 @@ import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import PromptCard from "@/components/PromptCard";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import AIPlatformSlider from "@/components/AIPlatformSlider";
 import { parseCSV, Prompt } from "@/utils/csvParser";
 import { toast } from "sonner";
 
@@ -44,6 +45,10 @@ const Index = () => {
             <p className="text-lg text-gray-400 max-w-2xl mx-auto animate-fade-in">
               ChatGPT ile daha etkili konuşmalar için Türkçe prompt koleksiyonu
             </p>
+          </div>
+          
+          <div className="py-8">
+            <AIPlatformSlider />
           </div>
         </div>
 
