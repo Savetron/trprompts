@@ -16,13 +16,13 @@ const PromptCard = ({ title, description, prompt, category = 'Genel' }: Prompt) 
   };
 
   return (
-    <Card className="bg-white p-6 shadow-card hover:shadow-lg transition-shadow duration-300">
+    <Card className="bg-white/80 backdrop-blur-sm p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-100">
       <div className="flex justify-between items-start gap-4">
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-            <h3 className="text-lg font-semibold text-secondary-foreground">{title}</h3>
-            <div className="flex items-center gap-1 text-xs text-gray-500">
-              <Tag className="h-4 w-4" />
+            <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+            <div className="flex items-center gap-1 text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">
+              <Tag className="h-3 w-3" />
               {category}
             </div>
           </div>
@@ -32,12 +32,12 @@ const PromptCard = ({ title, description, prompt, category = 'Genel' }: Prompt) 
           onClick={copyToClipboard}
           variant="ghost"
           size="icon"
-          className="shrink-0 text-primary hover:text-primary-dark hover:bg-primary-light/10"
+          className="shrink-0 text-purple-600 hover:text-purple-800 hover:bg-purple-100"
         >
           <Copy className="h-5 w-5" />
         </Button>
       </div>
-      <div className="mt-4 p-3 bg-secondary rounded-md">
+      <div className="mt-4 p-3 bg-purple-50/50 rounded-md border border-purple-100">
         <p className="text-sm text-gray-700 whitespace-pre-wrap">{prompt}</p>
       </div>
     </Card>

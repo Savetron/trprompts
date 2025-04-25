@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -31,11 +32,11 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            Türkçe ChatGPT Promptları
+        <div className="text-center mb-12 space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            Türkçe Prompt Kütüphanesi
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             ChatGPT ile daha etkili konuşmalar için Türkçe prompt koleksiyonu
@@ -48,7 +49,7 @@ const Index = () => {
             <Input
               type="search"
               placeholder="Prompt ara..."
-              className="pl-10"
+              className="pl-10 bg-white/80 backdrop-blur-sm border-purple-100 focus:border-purple-300 focus:ring-purple-300"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
