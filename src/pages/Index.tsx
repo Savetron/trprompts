@@ -39,7 +39,7 @@ const Index = () => {
         <img src="/logo.png" alt="Logo" className="h-10 w-auto md:h-12" />
       </div>
       <AnimatedBackground />
-      <div className="flex-1 flex flex-col max-w-7xl mx-auto px-4 py-12 pt-24 md:pt-12 w-full">
+      <div className="flex-1 flex flex-col max-w-7xl mx-auto px-4 pt-24 md:pt-12 w-full">
         <div className="text-center mb-12 space-y-6">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-500 mb-4">
@@ -90,17 +90,19 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
-            {filteredPrompts.map((prompt, index) => (
-              <PromptCard
-                key={index}
-                title={prompt.title}
-                description={prompt.description}
-                prompt={prompt.prompt}
-                category={prompt.category}
-              />
-            ))}
+        <div className="flex-1 min-h-0">
+          <div className="h-full overflow-y-auto">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
+              {filteredPrompts.map((prompt, index) => (
+                <PromptCard
+                  key={index}
+                  title={prompt.title}
+                  description={prompt.description}
+                  prompt={prompt.prompt}
+                  category={prompt.category}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
