@@ -72,7 +72,7 @@ const AIPlatformSlider = () => {
                     <img
                       src={platform.logo}
                       alt={`${platform.name} logo`}
-                      className="w-16 h-16 object-contain animate-float"
+                      className="w-16 h-16 object-contain text-white animate-float"
                     />
                   </div>
                 </div>
