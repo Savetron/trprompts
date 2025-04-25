@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -92,13 +93,78 @@ export default {
             transform: "translate(-25%, -25%) scale(1.1)",
           },
         },
+        blob4: {
+          "0%, 100%": {
+            transform: "translate(0, 0) scale(1)",
+          },
+          "33%": {
+            transform: "translate(-15%, 15%) scale(1.05)",
+          },
+          "66%": {
+            transform: "translate(15%, -15%) scale(0.95)",
+          },
+        },
+        twinkle: {
+          "0%, 100%": {
+            opacity: "0.2",
+            transform: "scale(0.8)",
+          },
+          "50%": {
+            opacity: "1",
+            transform: "scale(1.2)",
+          },
+        },
+        beam1: {
+          "0%, 100%": {
+            opacity: "0.3",
+            height: "30vh",
+          },
+          "50%": {
+            opacity: "0.6",
+            height: "35vh",
+          },
+        },
+        beam2: {
+          "0%, 100%": {
+            opacity: "0.2",
+            height: "50vh",
+          },
+          "50%": {
+            opacity: "0.5",
+            height: "45vh",
+          },
+        },
+        beam3: {
+          "0%, 100%": {
+            opacity: "0.25",
+            height: "40vh",
+          },
+          "50%": {
+            opacity: "0.45",
+            height: "35vh",
+          },
+        },
+        float: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       animation: {
         "fade-in-up": "fade-in-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
-        blob1: "blob1 7s infinite",
-        blob2: "blob2 7s infinite",
-        blob3: "blob3 7s infinite",
+        blob1: "blob1 15s infinite",
+        blob2: "blob2 18s infinite",
+        blob3: "blob3 20s infinite",
+        blob4: "blob4 25s infinite",
+        twinkle: "twinkle 4s ease-in-out infinite",
+        beam1: "beam1 8s ease-in-out infinite",
+        beam2: "beam2 12s ease-in-out infinite",
+        beam3: "beam3 10s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
     },
   },
