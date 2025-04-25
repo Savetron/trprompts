@@ -47,22 +47,44 @@ const Index = () => {
               ChatGPT, Claude, Gemini ve diğer yapay zeka platformları için özenle hazırlanmış Türkçe prompt koleksiyonu. Daha etkili ve verimli AI konuşmaları için ihtiyacınız olan tüm promptlar burada.
             </p>
           </div>
+
+          <div className="flex justify-center max-w-md mx-auto mb-8 animate-fade-in">
+            <div className="relative w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+              <Input
+                type="search"
+                placeholder="Prompt ara..."
+                className="pl-10 bg-white/5 backdrop-blur-sm border-purple-500/20 focus:border-purple-500 focus:ring-purple-500 text-white placeholder:text-gray-500"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
           
           <div className="py-8">
             <AIPlatformSlider />
           </div>
-        </div>
 
-        <div className="flex justify-center max-w-md mx-auto mb-12 animate-fade-in">
-          <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-            <Input
-              type="search"
-              placeholder="Prompt ara..."
-              className="pl-10 bg-white/5 backdrop-blur-sm border-purple-500/20 focus:border-purple-500 focus:ring-purple-500 text-white placeholder:text-gray-500"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
+          <div className="mt-12 grid md:grid-cols-2 gap-8 text-left bg-white/5 backdrop-blur-sm rounded-xl p-8 animate-fade-in">
+            <div>
+              <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 mb-4">
+                Yapay Zeka Prompt Kütüphanesi Nedir?
+              </h2>
+              <p className="text-gray-300 leading-relaxed">
+                Bu kütüphane, yapay zeka platformlarıyla daha etkili iletişim kurmanızı sağlayan, özenle hazırlanmış Türkçe prompt şablonları sunar. Her prompt, belirli bir amaca yönelik olarak optimize edilmiş ve test edilmiştir.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300 mb-4">
+                Neden Faydalı?
+              </h2>
+              <ul className="text-gray-300 space-y-3 list-disc pl-4">
+                <li>Zaman tasarrufu sağlar - hazır ve test edilmiş promptlarla hızlı sonuç alırsınız</li>
+                <li>Daha kaliteli çıktılar - optimize edilmiş promptlarla daha iyi yanıtlar elde edersiniz</li>
+                <li>Türkçe odaklı - ana dilinizde etkili promptlar oluşturmanıza yardımcı olur</li>
+                <li>Sürekli güncellenen içerik - yeni AI özellikleri için güncel promptlar</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -83,3 +105,4 @@ const Index = () => {
 };
 
 export default Index;
+
