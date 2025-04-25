@@ -32,24 +32,25 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="text-center mb-12 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#3b0764_0%,rgba(0,0,0,0)_50%)] opacity-50" />
+      <div className="max-w-7xl mx-auto px-4 py-12 relative z-10">
+        <div className="text-center mb-12 space-y-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white">
             Türkçe Prompt Kütüphanesi
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             ChatGPT ile daha etkili konuşmalar için Türkçe prompt koleksiyonu
           </p>
         </div>
 
         <div className="flex justify-center max-w-md mx-auto mb-12">
           <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
             <Input
               type="search"
               placeholder="Prompt ara..."
-              className="pl-10 bg-white/80 backdrop-blur-sm border-purple-100 focus:border-purple-300 focus:ring-purple-300"
+              className="pl-10 bg-white/5 backdrop-blur-sm border-purple-500/20 focus:border-purple-500 focus:ring-purple-500 text-white placeholder:text-gray-500"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
