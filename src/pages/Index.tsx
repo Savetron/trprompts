@@ -33,13 +33,13 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="relative z-10 flex flex-col min-h-screen bg-black overflow-hidden">
       {/* LOGO */}
       <div className="absolute left-1/2 -translate-x-1/2 top-4 z-30 md:left-6 md:translate-x-0 md:top-6">
         <img src="/logo.png" alt="Logo" className="h-10 w-auto md:h-12" />
       </div>
       <AnimatedBackground />
-      <div className="max-w-7xl mx-auto px-4 py-12 pt-24 md:pt-12 relative z-10">
+      <div className="flex-1 flex flex-col max-w-7xl mx-auto px-4 py-12 pt-24 md:pt-12 w-full">
         <div className="text-center mb-12 space-y-6">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-500 mb-4">
@@ -90,19 +90,39 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
-          {filteredPrompts.map((prompt, index) => (
-            <PromptCard
-              key={index}
-              title={prompt.title}
-              description={prompt.description}
-              prompt={prompt.prompt}
-              category={prompt.category}
-            />
-          ))}
+        <div className="flex-1 overflow-y-auto">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
+            {filteredPrompts.map((prompt, index) => (
+              <PromptCard
+                key={index}
+                title={prompt.title}
+                description={prompt.description}
+                prompt={prompt.prompt}
+                category={prompt.category}
+              />
+            ))}
+          </div>
         </div>
       </div>
+      <footer className="w-full py-6 text-center text-gray-400 bg-black/80 border-t border-purple-500/20 flex flex-col items-center gap-2">
+        <div>
+          © 2025 designed by <span className="font-semibold">@alço.dev</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <a
+            href="https://x.com/Alcodingg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 hover:text-blue-400 transition"
+          >
+            {/* X logosu SVG */}
+            <svg width="18" height="18" viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1200 0H1092.86L600 671.429L107.143 0H0L514.286 714.286L0 1227H107.143L600 555.571L1092.86 1227H1200L685.714 512.714L1200 0Z"/>
+            </svg>
+            @Alcodingg
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
