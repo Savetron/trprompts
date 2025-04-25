@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import PromptCard from "@/components/PromptCard";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { parseCSV, Prompt } from "@/utils/csvParser";
 import { toast } from "sonner";
 
@@ -33,18 +34,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#3b0764_0%,rgba(0,0,0,0)_50%)] opacity-50" />
+      <AnimatedBackground />
       <div className="max-w-7xl mx-auto px-4 py-12 relative z-10">
         <div className="text-center mb-12 space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-white">
-            Türkçe Prompt Kütüphanesi
-          </h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            ChatGPT ile daha etkili konuşmalar için Türkçe prompt koleksiyonu
-          </p>
+          <div className="animate-fade-in-up">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-500 mb-4">
+              Türkçe Prompt Kütüphanesi
+            </h1>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto animate-fade-in">
+              ChatGPT ile daha etkili konuşmalar için Türkçe prompt koleksiyonu
+            </p>
+          </div>
         </div>
 
-        <div className="flex justify-center max-w-md mx-auto mb-12">
+        <div className="flex justify-center max-w-md mx-auto mb-12 animate-fade-in">
           <div className="relative w-full">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
             <Input
@@ -57,7 +60,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
           {filteredPrompts.map((prompt, index) => (
             <PromptCard
               key={index}
