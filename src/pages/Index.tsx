@@ -40,7 +40,8 @@ const Index = () => {
         <div className="text-center mb-12 space-y-6">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-500 mb-4">
-              Yapay Zeka Prompt Kütüphanesi
+              Yapay Zeka<br />
+              Prompt Kütüphanesi
             </h1>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto animate-fade-in">
               ChatGPT, Claude, Gemini ve diğer yapay zeka platformları için özenle hazırlanmış Türkçe prompt koleksiyonu. Daha etkili ve verimli AI konuşmaları için ihtiyacınız olan tüm promptlar burada.
