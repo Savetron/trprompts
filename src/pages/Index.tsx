@@ -6,6 +6,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import AIPlatformSlider from "@/components/AIPlatformSlider";
 import { parseCSV, Prompt } from "@/utils/csvParser";
 import { toast } from "sonner";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,6 +35,21 @@ const Index = () => {
 
   return (
     <div className="relative z-10 flex flex-col min-h-screen bg-black overflow-hidden">
+      <Helmet>
+        <title>Türkçe Yapay Zeka Prompt Kütüphanesi | Prompt Garden</title>
+        <meta name="description" content="ChatGPT, Claude, Gemini ve diğer yapay zeka platformları için özenle hazırlanmış Türkçe prompt koleksiyonu. Daha etkili ve verimli AI konuşmaları için ihtiyacınız olan tüm promptlar burada." />
+        <meta property="og:title" content="Türkçe Yapay Zeka Prompt Kütüphanesi | Prompt Garden" />
+        <meta property="og:description" content="ChatGPT, Claude, Gemini ve diğer yapay zeka platformları için özenle hazırlanmış Türkçe prompt koleksiyonu." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.trprompts.com/" />
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Türkçe Yapay Zeka Prompt Kütüphanesi | Prompt Garden" />
+        <meta name="twitter:description" content="ChatGPT, Claude, Gemini ve diğer yapay zeka platformları için özenle hazırlanmış Türkçe prompt koleksiyonu." />
+        <meta name="twitter:image" content="/logo.png" />
+        <link rel="canonical" href="https://www.trprompts.com/" />
+      </Helmet>
       {/* LOGO */}
       <div className="absolute left-1/2 -translate-x-1/2 top-4 z-30 md:left-6 md:translate-x-0 md:top-6">
         <img src="/logo.png" alt="Logo" className="h-10 w-auto md:h-12" />
