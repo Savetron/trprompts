@@ -35,11 +35,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
       {/* LOGO */}
-      <div className="absolute top-6 left-6 z-30">
-        <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+      <div className="absolute left-1/2 -translate-x-1/2 top-4 z-30 md:left-6 md:translate-x-0 md:top-6">
+        <img src="/logo.png" alt="Logo" className="h-10 w-auto md:h-12" />
       </div>
       <AnimatedBackground />
-      <div className="max-w-7xl mx-auto px-4 py-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 py-12 pt-24 md:pt-12 relative z-10">
         <div className="text-center mb-12 space-y-6">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-500 mb-4">
