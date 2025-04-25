@@ -91,7 +91,8 @@ const Index = () => {
           </div>
         </div>
         <div className="flex-1 min-h-0">
-          <div className="h-full overflow-y-auto">
+          {/* Promptlar scrollable frame */}
+          <div className="overflow-y-auto" style={{ maxHeight: "60vh" }}>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 animate-fade-in">
               {filteredPrompts.map((prompt, index) => (
                 <PromptCard
