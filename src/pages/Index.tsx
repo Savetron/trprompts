@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -35,6 +34,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* LOGO */}
+      <div className="absolute top-6 left-6 z-30">
+        <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+      </div>
       <AnimatedBackground />
       <div className="max-w-7xl mx-auto px-4 py-12 relative z-10">
         <div className="text-center mb-12 space-y-6">
